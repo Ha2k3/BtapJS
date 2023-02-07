@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Website of Ha</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</head>
+<body class="bd" style="margin-top: 20px; padding: 20px;">
+    <h1>User Login</h1>
+    <div>
+        <label>
+            User Name
+            <br>
+            <input type="text" id="usn">
+        </label>
+    </div>
+    <div>
+        <label>
+            Pass Word
+            <br>
+            <input type="password" id="pw">
+        </label>
+    </div>
+    <br>
+    <div>
+        <button type="button" onclick="login()" name="Login">Login</button>
+        <button type="button" onclick="cancle()" name="Cancle">Clear</button>
+    </div>
+    <div id="mess"></div>
+    <!-- location.href="link" -->
+    <!-- window.location(link) -->
+    <script>
+        var usenames=["thuyha","bichngoc","honghai"]
+        var passwords=["123","kkkk","haicute"]
+        function login(){
+            var username=document.getElementById("usn").value;
+            var password=document.getElementById("pw").value;
+            var mess='';
+            for(var i=0;i<usenames.length;i++){
+                if(username==usenames[i]){
+                    mess='';
+                if(password==passwords[i]){
+                   location.href="http://www.google.com"
+            }
+                else{
+                    mess='Please re-enter your password!';
+                }
+                break;
+            }
+                else{
+                    mess='Please re-enter your username!';
+                }
+            }
+                document.getElementById("mess").innerHTML=mess;
+            }
+        function cancle(){
+            document.getElementById("usn").value='';
+            document.getElementById("pw").value='';
+            document.getElementById("usn").focus();
+        }
+    </script>
+</body>
+</html>

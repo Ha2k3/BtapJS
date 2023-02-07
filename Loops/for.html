@@ -1,0 +1,38 @@
+<!-- for(ts1;ts2;ts3){
+    ts1: gtri khoi tao ban dau
+    ts2: dkien ket thuc
+    ts3: tang/giam gia tri cua moi vong lap
+} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .square{
+            height:20px;
+            width:20px;
+            float:left;
+            border:1px solid gray;
+            margin-left:5px;
+            margin-bottom:5px;
+            background-color: yellow;
+        }
+    </style>
+    
+    <script>
+        var ngang=prompt("Moi ban nhap so dong");
+        var doc=prompt("Moi ban nhap so cot");
+        for(var i = 0; i < ngang; i++){
+            for(var j = 0; j < doc; j++){
+                document.write("<div class='square'></div>");
+            }
+            document.write("<div style='clear:both'></div>");
+        }
+    </script>
+</body>
+</html>

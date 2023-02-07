@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">BẢNG ĐIỂM CỦA EM</h1>
+    <span>Semester1:</span>
+    <input type="text" name="inputa" id="text_1" size="40px">
+    <br>
+    <br>
+    <span>Semester2:</span>
+    <input type="text" name="inputa" id="text_2" size="40px">
+    <span>Year:</span>
+        <select id="select" style="width: 50px; color:rgb(152, 40, 40); " id="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    <span>Summarise: <input id="sum" type="text"></span>
+    <button onclick="myFunction1()">Ok</button>
+    <button onclick="myFunction2()">Cancle</button>
+    <script>
+        function myFunction1(){
+            var x=parseInt(document.getElementById("text_1").value);
+            var y=parseInt(document.getElementById("text_2").value);
+            var z=parseInt(document.getElementById("select").value);
+            var result;
+            switch(z){
+                case 1:{
+                    result=((x+(y*2))/3);
+                    break;}
+                case 2:{
+                    result=((x+(y*3)/4));
+                    break;}
+                case 3:{
+                    result=((x+(y*4)/5));
+                }
+            }
+                document.getElementById("sum").value=result;
+        }
+        function myFunction2(){
+            document.getElementById("text_1").value="";
+            document.getElementById("text_2").value="";
+            document.getElementById("sum").value="";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>New Product</h2>
+    <form name="frm">
+        <p>
+            <label>
+                Product Name
+                <input type="text" name="pn" id="pn">
+            </label>
+            <label>
+                Quantity
+                <input type="text" name="qty" id="qty">
+            </label>
+        </p>
+        <p>
+            <label>
+                Unit Price
+                <input type="text" name="up" id="up">
+            </label>
+            <label>
+                Discount
+                <input type="text" name="dc" id="dc">
+            </label>
+        </p>
+        <p>
+            <button type="button" onclick="sell()">Sell</button>
+            <button type="button">Cancle</button>
+        </p>
+    </form>
+    <table id="tbp">
+        <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Discount</th>
+            <th>Subtotal</th>
+        </tr>
+    </table>
+    <style>
+        table{
+            width: 600px;
+            border-spacing: 0;
+            border: 1px solid rgb(225, 217, 217);
+        }
+        #tbp tr{
+            height: 27px;
+        }
+        #tbp tr th,#tbp tr td{
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        #tbp tr:last-child td{
+            border: none;
+        }
+    </style>
+    <script src="btprduct.js"></script>
+</body>
+</html>

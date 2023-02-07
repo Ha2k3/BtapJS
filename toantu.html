@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <p>
+            Moi ban nhap so
+        </p>
+        Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+        Enter your name: <input type="text" id="fusername" onkeyup="myFunction()">
+        <p>My name is: <span id="demo"></span></p>
+        <script>
+            function myFunction(){
+                var x = parseInt(document.getElementById("fname").value);
+                var y = parseInt(document.getElementById("fusername").value);
+                document.getElementById("demo").innerHTML = x + y; 
+            }
+        </script>
+    </body>
+</html>

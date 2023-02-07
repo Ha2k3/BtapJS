@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</head>
+<body style="margin-top: 20px; margin-left: 20px;">
+    <h3>Thêm sản phẩm </h3>
+        <div class="row" style="background-color: rgb(187, 187, 187); width: 700px; height: 30px;border-radius: 2px;margin-left: 2px;">
+           <p>Dashboard  Thêm sản phẩm</p>
+        </div>
+    <br>
+    <span>Danh mục sản phẩm.</span><br>
+        <select id="select" style="width: 700px; color:rgb(6, 5, 5); " id="select">
+            <option value="1">Điện thoại di động</option>
+            <option value="2">Laptop</option>
+            <option value="3">PCs</option>
+        </select>
+    <br>
+    <br>
+    <span>Thông tin.</span><br>
+    <select id="select" style="width: 700px; color:rgb(6, 5, 5); " id="select">
+        <option value="1">Sản phẩm nổi bật</option>
+        <option value="2">Sản phẩm bán chạy</option>
+    </select>
+    <br>
+    <br>
+    <input type="text" id="tx1" placeholder="Tên sản phẩm" style="width: 700px;"><br><br>
+    <input type="text" id="tx2" placeholder="Giá sản phẩm" style="width: 700px;"><br><br>
+    <input type="text" id="tx3" placeholder="Giá cũ" style="width: 700px;"><br><br>
+    <p>Thêm sản phẩm <b style="color: red; background-color: white; font-weight: 10px;">*Bắt buộc</b></p>
+    <button style="border-color: gray;" onclick="chon()">Chọn tệp</button> Chưa có tệp nào được chọn<br><br>
+    <button style="margin-left: 175px;background-color: rgb(202, 75, 75); color: white;border: none;border-radius: 5px;" onclick="them()">Đồng ý thêm</button>
+    <button style="margin-left: 30px;background-color: rgb(202, 75, 75); color: white;border: none;border-radius: 5px;" onclick="xoa()">Xóa</button>
+    <div id="content"></div>
+    <script>
+        function xoa() {
+            const element = document.getElementById("content");
+            element.xoa();
+        }
+        function selectFile(contentType, multiple){
+            return new Promise(resolve => {
+        let input = document.createElement('input');
+        input.type = 'file';
+        input.multiple = multiple;
+        input.accept = contentType;
+        input.onchange = () => {
+            let files = Array.from(input.files);
+            if (multiple)
+                resolve(files);
+            else
+                resolve(files[0]);
+        };
+        input.click();
+    });
+    }
+    let contentElement = document.getElementById("content");
+        async function chon(){
+    let files = await selectFile("image/*", true);
+    contentElement.innerHTML = files.map(file => `<img src="${URL.createObjectURL(file)}" style="width: 100px; height: 100px;">`).join('');
+    }
+        function selectFile (contentType, multiple){
+            return new Promise(resolve => {
+        let input = document.createElement('input');
+        input.type = 'file';
+        input.multiple = multiple;
+        input.accept = contentType;
+        input.onchange = _ => {
+            let files = Array.from(input.files);
+            if (multiple){
+                resolve(files);
+                console.log(files);
+             } else
+                resolve(files[0]);
+        };
+        input.click();
+    });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // mot mang doi tuong
+        var Sinhvien=[
+            {
+            name:"Vo Thi Thuy Ha",
+            year:2003,
+            gender:"Female",
+            hometown:"Quang Binh"
+            },
+            {
+            name:"Dang Van Nhat",
+            year:2004,
+            gender:"Male",
+            hometown:"Quang Binh"
+            },
+            {
+            name:"Dang Van Phap",
+            year:2005,
+            gender:"Male",
+            hometown:"Quang Binh"
+            }
+        ]
+        for(var x in Sinhvien){
+            document.write(Sinhvien[x].name + '<br>' + Sinhvien[x].year + '<br>' + Sinhvien[x].gender + '<br>' + Sinhvien[x].hometown +'<br>');
+        }
+        // Lap voi for i
+        // for(var i=0;i<Sinhvien.length;i++){
+        //     document.write(Sinhvien[i].name+ '<br>' + Sinhvien[i].year+ '<br>' + Sinhvien[i].gender + '<br>' + Sinhvien[i].hometown +'<br>');
+        // 
+    </script>
+</body>
+</html>

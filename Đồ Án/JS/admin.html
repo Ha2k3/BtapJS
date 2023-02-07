@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLable">Them San Pham</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-row">
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="name" placeholder="name">
+                        </div> <br><br>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="img" placeholder="img">
+                        </div> <br><br>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="price" placeholder="price">
+                        </div> <br><br>
+                        <a class="btn btn-outline-danger mt-3" href="" onclick="addProduct()">Them</a>
+                    </form>
+                </div> <br><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLable" aria-hidden="true"></div>
+</body>
+</html>

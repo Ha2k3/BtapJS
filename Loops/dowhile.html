@@ -1,0 +1,30 @@
+<!-- kiem tra dieu kien truoc roi moi thuc hien -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter number:
+    <input type="text" id="number" name="number"/>
+    <input type="button" onclick="doWhile()" value="Do-while loop" style="background-color: red;"/>
+    <p> 
+        <span id="demo"></span>
+    </p>
+    <script>
+        function doWhile(){
+        var number=document.getElementById("number").value;
+        var sum=0;
+        var i=1;
+        do{
+            sum = sum+i;
+            i++;
+        }while(i<=number)
+        document.getElementById("demo").innerHTML=sum;
+        }
+    </script>
+</body>
+</html>

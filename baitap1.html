@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+    Enter your number: <input type="text" id="fname" onkeyup="myFunction()"><br><br>
+    Enter your number: <input type="text" id="fusername" onkeyup="myFunction()">
+    <p>The result is: <span id="demo"></span></p>
+    <script>
+         function myFunction(){
+             var x=parseInt(document.getElementById("fname").value);
+             var y=parseInt(document.getElementById("fusername").value);
+             document.getElementById("demo").innerHTML = x+y+x*y;
+         }
+    </script>
+</body>
+</html>
+            <!-- <p>A function is triggered when the user is pressing a keypress field.</p>
+        <input type="text" onkeypress="myFunction()">
+        <script>
+            function myFunction(){
+                alert("You prossed a key inside the input field");
+            }
+        </script> -->
+        <!-- // var a=prompt("Input length:");
+        // var b=prompt("Input width:");
+        // var s=a*b;
+        // alert(s);
+        
+        // var status=confirm("Do you want to play?");
+        // alert(status);parseInt(prompt): doi sang number
+
+        // alert("Welcome to Game!");
+        // if (confirm("Do you want to play?")){
+        //     var h=prompt("Enter your name:","");
+        //     alert(h+"! now you are a part of the Game, enjoy!");
+        // } -->
+       
+    <!-- // <script src="bt.js"> -->
+    <!-- // <button onclick="birthday()" style="color: red;">
+    //     Birthday
+    // </button> 
+    //  Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+    // <p>My name is: <span id="demo"></span></p>
+    // <script> -->
+    <!-- //     function myFunction(){
+    //         var x=document.getElementById("fname").value;
+    //         document.getElementById("demo").innerHTML=x;
+    //     }
+    // </script>  -->
+  

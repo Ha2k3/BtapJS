@@ -1,0 +1,29 @@
+<html>
+<body>
+        <p>
+            Moi ban nhap so
+        </p>
+        <input type="number" id="nhap">
+        <button onclick="myFunction()" style="background-color: rgb(212, 90, 90);">Try it</button>
+        <span id="demo"></span>
+        <script>
+            function myFunction(){
+                var number=document.getElementById("nhap").value;
+                var greeting;
+                if(number==0){
+                    document.getElementById("demo").innerHTML="Ban duoc 0 diem";
+                    document.getElementById("demo").style.color="yellow";
+                }
+                else if(number>0){
+                    document.getElementById("demo").innerHTML="Day la so duong";
+                    document.getElementById("demo").style.color="blue";
+                }
+                else{
+                    document.getElementById("demo").innerHTML="Day la so am";
+                    document.getElementById("demo").style.color="black"
+                }
+            
+            }
+        </script>
+</body>
+</html>
